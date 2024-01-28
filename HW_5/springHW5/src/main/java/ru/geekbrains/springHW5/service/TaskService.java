@@ -15,9 +15,7 @@ import java.util.stream.Collectors;
 @Service
 @AllArgsConstructor
 public class TaskService {
-
     private final TaskRepository repository;
-
 
     /**
      * Добавление новой задачи.

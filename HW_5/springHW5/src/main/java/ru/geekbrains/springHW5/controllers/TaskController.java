@@ -6,6 +6,7 @@ import ru.geekbrains.SpringHW5.model.Task;
 import ru.geekbrains.SpringHW5.model.TaskStatus;
 import ru.geekbrains.SpringHW5.service.TaskService;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
@@ -22,6 +23,7 @@ public class TaskController {
      */
     @PostMapping
     public Task addTask(@RequestBody Task task){
+        task.setCreatedDate(LocalDateTime.now());
         return taskService.addTask(task);
     }
 
