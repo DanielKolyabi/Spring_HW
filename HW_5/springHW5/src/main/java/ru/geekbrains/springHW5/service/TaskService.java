@@ -36,18 +36,14 @@ public class TaskService {
         return repository.findAll();
     }
 
-
     /**
      * Просмотр задач по статусу
      *
      * @param status статус задачи
      * @return список задач одного статуса
      */
-    public List<Task> getTasksByStatus(TaskStatus status) {
-        return repository.findAll()
-                .stream()
-                .filter(task -> task.getTaskStatus() == status)
-                .collect(Collectors.toList());
+    public List<Task> findByStatus(TaskStatus status) {
+        return repository.findByStatus(status);
     }
 
     /**
@@ -61,7 +57,7 @@ public class TaskService {
         Optional<Task> optionalTask = repository.findById(id);
         if (optionalTask.isPresent()) {
             Task task1 = optionalTask.get();
-            task1.setTaskStatus(task.getTaskStatus());
+            task1.setStatus(task.getStatus());
             return repository.save(task1);
         } else {
             throw new IllegalArgumentException("Task not found with id");

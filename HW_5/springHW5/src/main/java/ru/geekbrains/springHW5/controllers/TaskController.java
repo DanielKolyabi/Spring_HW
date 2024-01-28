@@ -13,7 +13,6 @@ import java.util.List;
 @RequestMapping("/tasks")
 @AllArgsConstructor
 public class TaskController {
-
     private final TaskService taskService;
 
     /**
@@ -43,8 +42,8 @@ public class TaskController {
      * @return список задач одного статуса
      */
     @GetMapping("/status/{status}")
-    public List<Task> getTasksByStatus(@PathVariable TaskStatus status){
-        return taskService.getTasksByStatus(status);
+    public List<Task> findByStatus(@PathVariable TaskStatus status){
+        return taskService.findByStatus(status);
     }
 
 
