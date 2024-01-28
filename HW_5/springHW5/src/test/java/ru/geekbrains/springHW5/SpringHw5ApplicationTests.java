@@ -1,4 +1,4 @@
-package ru.geekbrains.springHW5;
+package ru.geekbrains.SpringHW5;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
