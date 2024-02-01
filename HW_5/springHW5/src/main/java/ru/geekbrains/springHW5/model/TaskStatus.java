@@ -1,4 +1,4 @@
-package ru.geekbrains.SpringHW5.model;
+package ru.geekbrains.springHW5.model;
 
 public enum TaskStatus {
     NOT_STARTED{
