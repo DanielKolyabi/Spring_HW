@@ -20,4 +20,5 @@ public class Task {
     private TaskStatus status;
     @Column(name = "createdDate")
     private LocalDateTime createdDate;
+
 }
